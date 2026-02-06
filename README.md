@@ -36,25 +36,32 @@ Unlike simple paraphrasers, this project uses **sentence-by-sentence rewriting**
 
 ---
 
-## 🧩 Architecture Overview
-          User Input
-              
-              ↓
-        
-        Sentence Rewrite Agent
-      
-              ↓
-    
-    
-        Flow Enhancer Agent
-↓
-Meaning Checker (Gemini)
-↓
-Scoring Agent
-↓
-Post-processing (Diff + Highlight)
-↓
-UI (Output + Trace + Highlights)
+## ⚠️ Important Note on Model Outputs
+
+> **Model outputs may vary between runs.**
+
+This is expected behavior because:
+- LLMs are probabilistic by design  
+- Temperature introduces controlled creativity  
+- Flow enhancement adds natural variation  
+- Model versions may change over time  
+
+This project prioritizes **human-like variation over deterministic output**.
+
+---
+
+## 🛠 Tech Stack
+
+- Python  
+- Flask  
+- LangChain  
+- LangGraph  
+- Groq  
+- Google Gemini  
+- NLTK  
+- HTML / CSS / JavaScript  
+
+
 
 
 
