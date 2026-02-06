@@ -37,6 +37,20 @@ Unlike simple paraphrasers, this project uses **sentence-by-sentence rewriting**
 ---
 
 ## 🧩 Architecture Overview
+User Input
+↓
+Sentence Rewrite Agent
+↓
+Flow Enhancer Agent
+↓
+Meaning Checker (Gemini)
+↓
+Scoring Agent
+↓
+Post-processing (Diff + Highlight)
+↓
+UI (Output + Trace + Highlights)
+
 
 
 
