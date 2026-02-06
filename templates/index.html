@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Humanizer AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🧠 Humanizer AI</h1>
+  <p class="subtitle">Explainable, memory-driven AI text humanization</p>
+
+  <label>Input Text</label>
+  <textarea id="text" placeholder="Paste AI-generated text here..."></textarea>
+
+  <label>Persona</label>
+  <select id="persona">
+    <option value="default">Default</option>
+    <option value="Gen Z">Gen Z</option>
+    <option value="Academic">Academic</option>
+    <option value="Sarcastic">Sarcastic</option>
+  </select>
+
+  <button onclick="humanize()">Humanize</button>
+
+  <!-- LOADER -->
+  <div id="loader" class="loader hidden"></div>
+
+  <!-- OUTPUT -->
+  <section class="output-section">
+    <div class="output-header">
+      <h2>Humanized Output</h2>
+      <button class="copy-btn" onclick="copyOutput()">📋 Copy</button>
+    </div>
+    <textarea
+      id="output"
+      readonly
+      placeholder="Your humanized text will appear here..."
+    ></textarea>
+  </section>
+
+  <!-- METRICS -->
+  <section class="metrics">
+    <div>📊 Burstiness: <span id="burst">–</span></div>
+    <div>🧠 Human-likeness: <span id="human">–</span></div>
+    <div>🔍 Meaning: <span id="meaning">–</span></div>
+  </section>
+
+  <!-- AGENT TRACE -->
+  <details class="trace-box">
+    <summary>🧬 Agent Reasoning Trace</summary>
+    <ul id="trace"></ul>
+  </details>
+
+  <!-- DIFF -->
+  <section class="diff-section">
+    <h2>🔍 What Changed</h2>
+    <div id="diff"></div>
+  </section>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
